@@ -19,7 +19,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int hhj;
+    private int nurasBatyrkhanov;
 
     @NotEmpty(message = "Введите имя и фамилию")
     @Size(min = 2, max = 120, message = "Минимальное количество символов- 2, максимальное количество символов- 120")
