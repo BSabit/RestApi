@@ -1,6 +1,7 @@
 package ru.batyrkhanov.springbootbackend.controllers;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.batyrkhanov.springbootbackend.models.Person;
 import ru.batyrkhanov.springbootbackend.services.PeopleService;
@@ -33,8 +34,8 @@ public class PeopleController {
     }
 
     @GetMapping("/{id}")
-    public Person getOne(@PathVariable("id") Person person) {
-        return person;
+    public ResponseEntity<Person> getOne(@PathVariable("id") Person person) {
+        return ResponseEntity.ok(person);
     }
 
 
